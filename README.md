@@ -44,7 +44,7 @@ npm run start
    ```
 
    > [!NOTE]
-   > be careful for capitalization of the body values, and both values should be strings
+   > Be careful with the capitalization of the body values, and ensure that both values are strings.
 
    If the login is successful, you will receive a JWT token in the response.
    
