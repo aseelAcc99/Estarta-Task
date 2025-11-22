@@ -1,0 +1,27 @@
+{
+  "name": "estarta-task",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "init-db": "node src/database/init-db.js",
+    "start": "node src/server.js",
+    "startDev": "nodemon src/server.js"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "fs": "^0.0.1-security",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "node-cache": "^5.1.2",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
