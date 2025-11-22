@@ -30,7 +30,7 @@ const getToken = async (req, res, next) => {
       token: token,
     });
   } catch (err) {
-    console.log("error in token generation "+ error);
+    console.log("error in token generation " + err);
     next(err);
   }
 };

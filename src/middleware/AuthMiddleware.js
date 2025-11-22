@@ -9,6 +9,7 @@ export const authMiddleware = async (req, res, next) => {
   }
 
   const token = authHeader.replace("Bearer ", "");
+
   try {
     const verifiedToken = verifyToken(token);
     if (!verifiedToken) {
@@ -17,7 +18,6 @@ export const authMiddleware = async (req, res, next) => {
     req.user = verifiedToken;
     next();
   } catch (error) {
-    console.log("error in token validation " + error);
-    throw new HttpError("Invalid Token", 401);
+    throw new HttpError("Invalid or Expired Token", 401);
   }
 };

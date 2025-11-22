@@ -1,0 +1,414 @@
+{
+	"info": {
+		"_postman_id": "2db52d89-596f-47a7-8a91-408cb6a5cf05",
+		"name": "GetEmpStatus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21213702"
+	},
+	"item": [
+		{
+			"name": "get token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NationalNumber\": \"NAT1002\",\r\n    \"Username\": \"asalem\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/login",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "no national number",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFzYWxlbSIsIm5hdGlvbmFsTnVtYmVyIjoiTkFUMTAwMiIsImlhdCI6MTc2MzgyOTYxNywiZXhwIjoxNzYzODMzMjE3fQ.bbM6QxyB1HxjcVero3FnAAHzraQ6SwWl6g7tJUMNJDM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/GetEmpStatus",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"GetEmpStatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "national number is not a string",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFzYWxlbSIsIm5hdGlvbmFsTnVtYmVyIjoiTkFUMTAwMiIsImlhdCI6MTc2MzgyOTYxNywiZXhwIjoxNzYzODMzMjE3fQ.bbM6QxyB1HxjcVero3FnAAHzraQ6SwWl6g7tJUMNJDM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NationalNumber\": 11234\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/GetEmpStatus",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"GetEmpStatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user doesnt exist",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFzYWxlbSIsIm5hdGlvbmFsTnVtYmVyIjoiTkFUMTAwMiIsImlhdCI6MTc2MzgyOTYxNywiZXhwIjoxNzYzODMzMjE3fQ.bbM6QxyB1HxjcVero3FnAAHzraQ6SwWl6g7tJUMNJDM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NationalNumber\": \"NAT1000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/GetEmpStatus",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"GetEmpStatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user is not active",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFzYWxlbSIsIm5hdGlvbmFsTnVtYmVyIjoiTkFUMTAwMiIsImlhdCI6MTc2MzgyOTYxNywiZXhwIjoxNzYzODMzMjE3fQ.bbM6QxyB1HxjcVero3FnAAHzraQ6SwWl6g7tJUMNJDM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NationalNumber\": \"NAT1003\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/GetEmpStatus",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"GetEmpStatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "less than 3 records",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFzYWxlbSIsIm5hdGlvbmFsTnVtYmVyIjoiTkFUMTAwMiIsImlhdCI6MTc2MzgyOTYxNywiZXhwIjoxNzYzODMzMjE3fQ.bbM6QxyB1HxjcVero3FnAAHzraQ6SwWl6g7tJUMNJDM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NationalNumber\": \"NAT1012\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/GetEmpStatus",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"GetEmpStatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RED status",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFzYWxlbSIsIm5hdGlvbmFsTnVtYmVyIjoiTkFUMTAwMiIsImlhdCI6MTc2MzgyOTYxNywiZXhwIjoxNzYzODMzMjE3fQ.bbM6QxyB1HxjcVero3FnAAHzraQ6SwWl6g7tJUMNJDM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NationalNumber\": \"NAT1007\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/GetEmpStatus",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"GetEmpStatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "same as prev -check cache",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFzYWxlbSIsIm5hdGlvbmFsTnVtYmVyIjoiTkFUMTAwMiIsImlhdCI6MTc2MzgyOTYxNywiZXhwIjoxNzYzODMzMjE3fQ.bbM6QxyB1HxjcVero3FnAAHzraQ6SwWl6g7tJUMNJDM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NationalNumber\": \"NAT1007\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/GetEmpStatus",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"GetEmpStatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ORANGE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFzYWxlbSIsIm5hdGlvbmFsTnVtYmVyIjoiTkFUMTAwMiIsImlhdCI6MTc2MzgyOTYxNywiZXhwIjoxNzYzODMzMjE3fQ.bbM6QxyB1HxjcVero3FnAAHzraQ6SwWl6g7tJUMNJDM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NationalNumber\": \"NAT1014\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/GetEmpStatus",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"GetEmpStatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GREEN",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFzYWxlbSIsIm5hdGlvbmFsTnVtYmVyIjoiTkFUMTAwMiIsImlhdCI6MTc2MzgyOTYxNywiZXhwIjoxNzYzODMzMjE3fQ.bbM6QxyB1HxjcVero3FnAAHzraQ6SwWl6g7tJUMNJDM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NationalNumber\": \"NAT1008\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/GetEmpStatus",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"GetEmpStatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "more than 3 records- multi year",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFzYWxlbSIsIm5hdGlvbmFsTnVtYmVyIjoiTkFUMTAwMiIsImlhdCI6MTc2MzgyOTYxNywiZXhwIjoxNzYzODMzMjE3fQ.bbM6QxyB1HxjcVero3FnAAHzraQ6SwWl6g7tJUMNJDM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NationalNumber\": \"NAT1013\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/GetEmpStatus",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"GetEmpStatus"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
