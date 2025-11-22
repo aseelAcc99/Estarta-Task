@@ -52,10 +52,7 @@ npm run start
   **Endpoint:**  
    `POST [baseurl]/api/getEmpStatus`
    
-4. Use the following Postman Collection to test all endpoints:
-  ```bash
-    https://.postman.co/workspace/My-Workspace~4eae077f-e5b7-4fec-89bb-c79a7ecb4a95/collection/21213702-2db52d89-596f-47a7-8a91-408cb6a5cf05?action=share&creator=21213702
-  ```
+4. Use the Postman Collection file included in the folder to test all endpoints.
 
 ## Description of the Architecture
 This service was created using **Node.js**. I followed the MVC structure while adhering to core classes and responsibilities.
