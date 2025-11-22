@@ -1,4 +1,4 @@
-# empGetStatus Service
+# GetEmpStatus Service
 
 ## Setup instructions
 - Clone the repo.
@@ -64,9 +64,8 @@ This service was created using **Node.js**. I followed the MVC structure while a
 - **middleware/** -> Custom middlewares (authentication, errorHandling)  
 - **models/** -> Data schemas 
 - **routes/** -> API route definitions  
-- **services/** -> Business logic and dataAccess   
-- **utils/** -> Utility/helper functions  
-- **README.md** 
+- **services/** -> Business logic and data access   
+- **utils/** -> Utility/helper functions(caching, jwt, validator)  
 - **app.js** -> Express app setup  
 - **server.js** -> Server startup and configuration, main entry point of the app
 - **.env** -> enivoronment variables
@@ -85,9 +84,9 @@ This service was created using **Node.js**. I followed the MVC structure while a
 
  ## My Notes
  - I added some data to the provided sample data to try to cover all cases.
- - In the Salaries table, I noticed some of te primary key Ids were replicted so I made the id in the table SERIAL.
+ - In the Salaries table, I noticed some of the primary key Ids were replicted so I made the id in the table SERIAL.
  - The login is based on the nationalnumber and username values.
  - Case sensitivity is crucial in the body request.
  - Business Logic Assumptions:
-     - I applied the tax deduction on the yearly total, and eventho the data only has the same year for all the salaries records I assumed that in real life the data will cover more than that.
-     - The average is calculated based on the sum after the tax deduction.
+     - I applied the tax deduction on the yearly total, the data sample only has the same year for all the salaries records but I thought that in real life the data will cover more than that and covered that.
+     - The average is calculated based on the sum after the tax deduction and the adjustments. 
