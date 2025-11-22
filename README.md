@@ -89,4 +89,5 @@ This service was created using **Node.js**. I followed the MVC structure while a
  - Case sensitivity is crucial in the body request.
  - Business Logic Assumptions:
      - I applied the tax deduction on the yearly total, the data sample only has the same year for all the salaries records but I thought that in real life the data will cover more than that and covered that.
-     - The average is calculated based on the sum after the tax deduction and the adjustments. 
+     - The average is calculated based on the sum after the tax deduction and the adjustments.
+     - Avg and highest are rounded to 2 decimals.
